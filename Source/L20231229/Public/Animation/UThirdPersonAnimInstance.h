@@ -18,8 +18,26 @@ public:
 	UFUNCTION(BlueprintCallable)
 	virtual void NativeUpdateAnimation(float DeltaSeconds)override;
 
+	void Debug();
+
 private:
 
 	UPROPERTY(BlueprintReadOnly,Editanywhere,Category="Stat",meta=(AllowPrivateAccess ="true"))
 	float Speed;
+
+	UPROPERTY(BlueprintReadOnly, Editanywhere, Category = "Stat", meta = (AllowPrivateAccess = "true"))
+	bool bJumping;
+
+	//
+	UPROPERTY(BlueprintReadOnly, Editanywhere, Category = "Stat", meta = (AllowPrivateAccess = "true"))
+	float GroundSpeed;
+
+	UPROPERTY(BlueprintReadOnly, Editanywhere, Category = "Stat", meta = (AllowPrivateAccess = "true"))
+	bool bShouldMove;
+
+	UPROPERTY(BlueprintReadOnly, Editanywhere, Category = "Stat", meta = (AllowPrivateAccess = "true"))
+	bool bIsFalling;
+
+	UPROPERTY(BlueprintReadOnly, Editanywhere, Category = "Stat", meta = (AllowPrivateAccess = "true"))
+	FVector Velocity;
 };
